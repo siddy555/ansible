@@ -2,7 +2,7 @@
 - hosts: all
   tasks:
     - name: install httpd
-      yum: name=httpd state=latest
+      yum: "name={{ pkg }} state=latest"
       become: true
       become_user: root
 
